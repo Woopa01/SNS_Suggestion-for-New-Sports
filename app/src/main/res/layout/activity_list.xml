@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/navi"
+                android:src="@drawable/Navi"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:layout_editor_absoluteX="16dp"
                 tools:ignore="MissingConstraints" />
