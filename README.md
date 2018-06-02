@@ -1,1 +1,1 @@
-# SNS---Suggestion-for-New-Sports
+# SNS_Suggestion-for-New-Sports
