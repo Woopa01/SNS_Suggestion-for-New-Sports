@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:padding="5dp"
     android:background="@drawable/item_viewpager_shape"
     android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:padding="5dp"
-    android:clipToPadding="false">
+    android:layout_height="100dp">
 
     <RelativeLayout
         android:background="@color/colorMain"
@@ -15,11 +14,10 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/main_viewpager_number"
             android:textColor="#fff"
             android:layout_centerInParent="true"
+            android:textSize="50sp"
             android:text="1"
-            android:textSize="90sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -32,77 +30,79 @@
         android:layout_height="match_parent">
 
         <View
-            android:layout_weight="3"
+            android:layout_weight="6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_weight="1"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <View
-                android:layout_weight="1.17"
+                android:layout_weight="1.2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
-            
+
             <TextView
-                android:id="@+id/main_sports_name"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:text="운동 이름"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <View
-                android:layout_weight="1.18"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
 
             <TextView
-                android:id="@+id/main_nickname"
-                android:textSize="15sp"
                 android:text="닉네임"
                 android:layout_weight="1.1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <View
-                android:layout_weight="1.3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-            <TextView
-                android:id="@+id/main_like"
-                android:text="좋아요 100개"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
             <View
                 android:layout_weight="1.1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
-            <TextView
-                android:id="@+id/main_date"
-                android:text="0000.00.00."
+            <LinearLayout
                 android:layout_weight="1"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="좋아요 : 30"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <View
+                    android:layout_weight="1.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="0000.00.00" />
+            </LinearLayout>
+
 
             <View
-                android:layout_weight="1.1"
+                android:layout_weight="1.2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
+
         </LinearLayout>
 
         <View
-            android:layout_weight="3"
+            android:layout_weight="6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
     </LinearLayout>
+
 
 </LinearLayout>

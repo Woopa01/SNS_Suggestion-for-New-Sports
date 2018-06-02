@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -24,7 +29,6 @@
                 android:layout_weight="2.9" />
 
             <ImageView
-<<<<<<< HEAD
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2.7"
@@ -67,16 +71,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
-=======
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/navi"
-                app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="16dp"
-                tools:ignore="MissingConstraints" />
->>>>>>> 641074ced2c74c62738e9b5351a1a8da1307045a
 
             <LinearLayout
                 android:orientation="vertical"
@@ -263,4 +257,17 @@
     </LinearLayout>
 
 
-</LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:src="@drawable/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"/>
+
+</RelativeLayout>

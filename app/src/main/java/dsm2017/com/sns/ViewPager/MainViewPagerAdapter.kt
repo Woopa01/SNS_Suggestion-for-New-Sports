@@ -1,4 +1,4 @@
-package dsm2017.com.sns
+package dsm2017.com.sns.ViewPager
 
 import android.content.Context
 import android.support.v4.view.PagerAdapter
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import dsm2017.com.sns.MainActivity
+import dsm2017.com.sns.R
 
 class MainViewPagerAdapter(mainActivity: MainActivity, viewpagerdata1: ArrayList<MainViewPageData>) : PagerAdapter() {
 
