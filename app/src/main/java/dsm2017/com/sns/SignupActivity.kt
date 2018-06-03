@@ -1,5 +1,6 @@
 package dsm2017.com.sns
 
+import android.content.Intent
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.support.v7.app.AppCompatActivity
@@ -15,7 +16,7 @@ import retrofit2.Response
 
 class SignupActivity : AppCompatActivity() {
 
-    lateinit var checkbool : String
+    var checkbool : String = "true"
     lateinit var emailcode : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,6 +67,7 @@ class SignupActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<ResponseBody>?, response: Response<ResponseBody>?) {
                         if (response!!.code() == 200) {
                             Log.d("DEBUG", "success")
+                            Nextpage()
                         } else {
 
                         }
@@ -78,4 +80,11 @@ class SignupActivity : AppCompatActivity() {
                 })
 
     }
+
+     fun Nextpage() {
+         Toast.makeText(baseContext,"성공적으로 회원가입 되었습니다.",Toast.LENGTH_SHORT).show()
+        val intent = Intent(SignupActivity@this,SigninActivity::class.java)
+         startActivity(intent)
+         finish()
+     }
 }

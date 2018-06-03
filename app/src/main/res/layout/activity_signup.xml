@@ -12,13 +12,13 @@
         android:layout_height="30dp" />
 
     <ImageView
-        app:layout_constraintTop_toBottomOf="@id/signup_view"
         android:id="@+id/signup_logo"
         android:layout_width="250dp"
         android:layout_height="200dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_view" />
 
     <EditText
         android:id="@+id/signup_nickname"
@@ -56,14 +56,14 @@
             android:layout_weight="2.8" />
 
         <Button
-            android:textSize="13sp"
             android:id="@+id/signup_checkemail_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:background="@drawable/all_button_shape"
             android:text="인증코드 발송"
-            android:textColor="#fff" />
+            android:textColor="#fff"
+            android:textSize="13sp" />
 
     </LinearLayout>
 
@@ -87,6 +87,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/all_edittext_shape"
         android:hint="비밀번호를 입력해주세요"
+        android:inputType="textPassword"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,13 +100,13 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/all_edittext_shape"
         android:hint="비밀번호를 다시 입력해주세요"
+        android:inputType="textPassword"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_password" />
 
     <Button
-        android:textSize="17sp"
         android:id="@+id/signup_signup_button"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -113,14 +114,15 @@
         android:background="@drawable/all_button_shape"
         android:text="이메일 인증 및 회원가입"
         android:textColor="#fff"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_password_check" />
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="250dp"
         android:layout_height="30dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

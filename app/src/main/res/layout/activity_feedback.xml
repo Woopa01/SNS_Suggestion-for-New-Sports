@@ -99,6 +99,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:background="@drawable/ex_edittext_shape"
         android:hint="내용을 입력해주세요"
         android:layout_width="300dp"
         android:layout_height="350dp"

@@ -55,6 +55,16 @@ class MainViewPagerAdapter(mainActivity: MainActivity, viewpagerdata1: ArrayList
             var date = view.findViewById<TextView>(R.id.main_date)
             date.text = this.mainViewPageData.get(position).date
 
+            var detail_title = view.findViewById<TextView>(R.id.detail_title)
+
+            var detail_name = view.findViewById<TextView>(R.id.detail_name)
+
+            var detail_content = view.findViewById<TextView>(R.id.detail_content)
+
+            var detail_like = view.findViewById<TextView>(R.id.showdetail_like)
+
+            var detail_date = view.findViewById<TextView>(R.id.detail_date)
+
         container.addView(view)
 
         view.setOnClickListener {

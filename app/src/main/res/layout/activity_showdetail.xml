@@ -83,7 +83,9 @@
 
 
     <TextView
-        android:id="@+id/title"
+        android:text="제목"
+        android:textSize="20sp"
+        android:id="@+id/detail_title"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
@@ -95,8 +97,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_title">
+
+        <TextView
+            android:text="닉네임"
+            android:textSize="15sp"
+            android:id="@+id/detail_name"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:text="날짜"
+            android:textSize="15sp"
+            android:id="@+id/detail_date"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
     <TextView
-        android:id="@+id/content"
+        android:text="내용"
+        android:textSize="17sp"
+        android:id="@+id/detail_content"
         android:layout_width="300dp"
         android:layout_height="260dp"
         android:layout_marginBottom="8dp"
@@ -111,7 +150,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/showdetail_like"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginBottom="8dp"
@@ -125,11 +164,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/content"
+        app:layout_constraintTop_toBottomOf="@+id/detail_content"
         app:layout_constraintVertical_bias="0.164" />
 
     <ImageView
-        android:id="@+id/feedback"
+        android:id="@+id/feedback_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
@@ -142,21 +181,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.561"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/content"
+        app:layout_constraintStart_toEndOf="@+id/showdetail_like"
+        app:layout_constraintTop_toBottomOf="@+id/detail_content"
         app:layout_constraintVertical_bias="0.272" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/showdetail_like"
         android:text="                           좋아요"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/feedback"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_btn"
         android:text="                                                                        피드백 올리기"
         />
 
