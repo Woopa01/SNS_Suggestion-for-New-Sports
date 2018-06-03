@@ -44,5 +44,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(MainActivity@this,WriteActivty::class.java)
             startActivity(intent)
         }
+
+        main_mypage.setOnClickListener {
+            val intent = Intent(MainActivity@this,MyPageActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

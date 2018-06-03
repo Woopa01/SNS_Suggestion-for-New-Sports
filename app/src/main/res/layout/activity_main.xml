@@ -29,10 +29,11 @@
                 android:layout_weight="2.9" />
 
             <ImageView
+                android:id="@+id/main_mypage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2.7"
-                android:src="@drawable/navi" />
+                android:src="@drawable/toolicon" />
 
             <View
                 android:layout_width="match_parent"

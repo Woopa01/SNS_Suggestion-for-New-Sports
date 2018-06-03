@@ -14,6 +14,7 @@
         <activity android:name=".SignupActivity"/>
         <activity android:name=".ShowDetailActivity"/>
         <activity android:name=".WriteActivty"/>
+        <activity android:name=".MyPageActivity"/>
         <activity android:name=".ShowListActivity"/>
         <activity android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -25,4 +26,5 @@
         </activity>
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

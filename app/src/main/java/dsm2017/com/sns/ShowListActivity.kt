@@ -1,5 +1,6 @@
 package dsm2017.com.sns
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import dsm2017.com.sns.Recycler.Recycleitem
@@ -21,6 +22,12 @@ class ShowListActivity : AppCompatActivity() {
 
         var adapter = Recycleradapter(recyclerdata,context)
         list_recycler?.adapter = adapter
+
+        list_back.setOnClickListener {
+            val intent = Intent(ShowListActivity@this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
     }
 }

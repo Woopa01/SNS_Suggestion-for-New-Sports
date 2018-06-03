@@ -1,6 +1,7 @@
 package dsm2017.com.sns.ViewPager
 
 import android.content.Context
+import android.content.Intent
 import android.support.v4.view.PagerAdapter
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import dsm2017.com.sns.MainActivity
 import dsm2017.com.sns.R
+import dsm2017.com.sns.ShowDetailActivity
 
 class MainViewPagerAdapter(mainActivity: MainActivity, viewpagerdata1: ArrayList<MainViewPageData>) : PagerAdapter() {
 
@@ -54,6 +56,11 @@ class MainViewPagerAdapter(mainActivity: MainActivity, viewpagerdata1: ArrayList
             date.text = this.mainViewPageData.get(position).date
 
         container.addView(view)
+
+        view.setOnClickListener {
+            val intent = Intent(context,ShowDetailActivity::class.java)
+            context.startActivity(intent)
+        }
 
         return view
     }

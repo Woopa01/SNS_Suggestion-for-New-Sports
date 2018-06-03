@@ -22,10 +22,11 @@
                 android:layout_weight="2.9" />
 
             <ImageView
+                android:id="@+id/feedback_back"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2.88"
-                android:src="@drawable/navi" />
+                android:src="@drawable/back" />
 
             <View
                 android:layout_width="match_parent"
