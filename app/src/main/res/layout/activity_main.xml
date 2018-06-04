@@ -184,7 +184,6 @@
              </LinearLayout>
 
              <android.support.v4.view.ViewPager
-                 android:background="@drawable/item_viewpager_shape"
                  android:layout_weight="0.3"
                  android:id="@+id/main_viewpager1"
                  android:layout_width="match_parent"
@@ -234,7 +233,6 @@
                 </LinearLayout>
 
                 <android.support.v4.view.ViewPager
-                    android:background="@drawable/item_viewpager_shape"
                     android:layout_weight="0.3"
                     android:id="@+id/main_viewpager2"
                     android:layout_width="match_parent"

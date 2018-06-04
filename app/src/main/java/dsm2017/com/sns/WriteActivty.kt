@@ -16,5 +16,9 @@ class WriteActivty : AppCompatActivity(){
             finish()
         }
 
+        write_ok.setOnClickListener {
+            
+        }
+
     }
 }

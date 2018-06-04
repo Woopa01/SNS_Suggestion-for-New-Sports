@@ -19,5 +19,11 @@ class ShowDetailActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    feedback_btn.setOnClickListener {
+        val intent = Intent(ShowDetailActivity@this,FeedBackWriteActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
     }
 }

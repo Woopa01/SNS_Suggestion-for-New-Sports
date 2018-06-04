@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:padding="5dp"
-    android:background="@drawable/item_viewpager_shape"
     android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp">
 
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:background="@drawable/item_viewpager_shape"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
     <RelativeLayout
-        android:background="@color/colorMain"
+        android:background="@drawable/all_image_shape"
         android:layout_weight="2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="80dp">
 
         <TextView
             android:textColor="#fff"
@@ -27,7 +32,7 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="80dp">
 
         <View
             android:layout_weight="6"
@@ -47,7 +52,7 @@
 
             <TextView
                 android:id="@+id/list_recycler_title"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:text="운동 이름"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
@@ -63,7 +68,7 @@
 
 
             <View
-                android:layout_weight="1.1"
+                android:layout_weight="1.3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
@@ -106,7 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
+        </LinearLayout>
     </LinearLayout>
-
 
 </LinearLayout>
