@@ -6,6 +6,7 @@
     android:layout_height="100dp">
 
     <LinearLayout
+        android:id="@+id/recycler_item"
         android:layout_margin="20dp"
         android:background="@drawable/item_viewpager_shape"
         android:orientation="horizontal"

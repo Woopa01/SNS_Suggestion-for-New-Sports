@@ -79,16 +79,18 @@ class MainActivity : AppCompatActivity() {
                  .enqueue(object : retrofit2.Callback<SportsLikeModel>{
 
                      override fun onResponse(call: Call<SportsLikeModel>?, response: Response<SportsLikeModel>?) {
-//                         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                          var res = response!!.body()
                          res!!.sports_like.forEach {
                              var sports_name = it.sports_name
+                             var user_name = it.user_name
+                             var sports_like = it.sports_like
+                             var sports_date = it.sports_date
+                             var sports_serialnumber = it.sports_serialnumber
                              Log.d("DEBUG","$sports_name")
                          }
                      }
 
                      override fun onFailure(call: Call<SportsLikeModel>?, t: Throwable?) {
-//                         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                          Toast.makeText(baseContext,"안되잖아",Toast.LENGTH_SHORT).show()
                      }
                  })

@@ -27,5 +27,10 @@ interface API {
     @FormUrlEncoded
     fun ShowMainRequest(@FieldMap map: HashMap<String, String>) : Call<SportsLikeModel>
 
+    @POST("/insert/sports")
+    @FormUrlEncoded
+    fun WriteSportsRequest(@FieldMap map: HashMap<String,String> ) : Call<ResponseBody>
+
+
 
 }

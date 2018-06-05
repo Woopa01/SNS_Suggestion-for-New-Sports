@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import dsm2017.com.sns.R
@@ -18,10 +19,10 @@ class Recycleradapter(val items: ArrayList<Recycleitem>, val context: Context) :
         holder.name.text = items[position].nick_name
         holder.like.text = items[position].like
         holder.date.text = items[position].date
-        holder.itemView.setOnClickListener {
+        holder.view.setOnClickListener({
             val intent = Intent(context,ShowDetailActivity::class.java)
             context.startActivity(intent)
-        }
+        })
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder{
@@ -40,5 +41,6 @@ class Recycleradapter(val items: ArrayList<Recycleitem>, val context: Context) :
         val name = itemView.findViewById<TextView>(R.id.list_recycler_name)
         val like = itemView.findViewById<TextView>(R.id.list_recycler_like)
         val date = itemView.findViewById<TextView>(R.id.list_recycler_date)
+        val view = itemView.findViewById<LinearLayout>(R.id.recycler_item)
     }
 }

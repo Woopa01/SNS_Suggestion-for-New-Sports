@@ -23,11 +23,13 @@ class SigninActivity : AppCompatActivity() {
            //SignInRequest(signin_id.text.toString(),signin_password.text.toString())
             val intent = Intent(SigninActivity@this,MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         signin_signup_button.setOnClickListener {
             val intent = Intent(SigninActivity@this,SignupActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
 
@@ -40,8 +42,8 @@ class SigninActivity : AppCompatActivity() {
                 .enqueue(object : retrofit2.Callback<UserDataModel>{
                     override fun onResponse(call: Call<UserDataModel>?, response: Response<UserDataModel>?) {
                         var userDataModel = response!!.body()
-                        var username : String = ""
-                        var usertoken : String = ""
+                        var username : String
+                        var usertoken : String
 
                              username = userDataModel!!.UserDatas().user_name.toString()
                              usertoken = userDataModel!!.UserDatas().user_token.toString()
@@ -54,7 +56,7 @@ class SigninActivity : AppCompatActivity() {
                     }
 
                     override fun onFailure(call: Call<UserDataModel>?, t: Throwable?) {
-                        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
                     }
 
                 })

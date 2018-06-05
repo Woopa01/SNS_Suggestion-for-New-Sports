@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object Connect {
     lateinit var api: API
 
-    val url = "http://35.190.237.101:3000/"
+    val url = "http://35.190.237.101:3333/"
 
     init {
         val retrofit = Retrofit.Builder()
