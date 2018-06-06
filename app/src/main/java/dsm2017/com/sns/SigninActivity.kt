@@ -1,6 +1,8 @@
 package dsm2017.com.sns
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -15,6 +17,10 @@ import retrofit2.Response
 import retrofit2.Retrofit
 
 class SigninActivity : AppCompatActivity() {
+
+    lateinit var username : String
+    lateinit var usertoken : String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
@@ -42,11 +48,14 @@ class SigninActivity : AppCompatActivity() {
                 .enqueue(object : retrofit2.Callback<UserDataModel>{
                     override fun onResponse(call: Call<UserDataModel>?, response: Response<UserDataModel>?) {
                         var userDataModel = response!!.body()
-                        var username : String
-                        var usertoken : String
 
-                             username = userDataModel!!.UserDatas().user_name.toString()
-                             usertoken = userDataModel!!.UserDatas().user_token.toString()
+                             username = userDataModel!!.UserDatas().user_name
+                             usertoken = userDataModel.UserDatas().user_token
+
+                        val shaeredPreferences = getSharedPreferences("pref", Context.MODE_PRIVATE)
+                        val editor = shaeredPreferences.edit()
+                                .putString("user_name",username)
+                                .putString("user_token",usertoken)
 
                         Log.d("DEBUG",usertoken)
                         Log.d("DEBUG",username)

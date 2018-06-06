@@ -1,5 +1,6 @@
 package dsm2017.com.sns
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -17,6 +18,10 @@ class WriteActivty : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_write)
 
+        val sharedPreferences = getSharedPreferences("pref", Context.MODE_PRIVATE)
+        var user_name = sharedPreferences.getString("user_name","null")
+        var user_token = sharedPreferences.getString("user_token","null")
+
         write_back.setOnClickListener {
             val intent = Intent(WriteActivty@this,MainActivity::class.java)
             startActivity(intent)
@@ -24,14 +29,14 @@ class WriteActivty : AppCompatActivity(){
         }
 
         write_ok.setOnClickListener {
-            InsertNewSportsRequest(write_title.text.toString(),write_content.text.toString())
+            InsertNewSportsRequest(write_title.text.toString(),write_content.text.toString(),user_name,user_token)
         }
 
     }
 
-    fun InsertNewSportsRequest(sports_name: String, sports_rule: String) {
-        val map = hashMapOf<String,String>("sports_name" to sports_name, "sprots_rule" to sports_rule,"user_token" to "user_token",
-                "sports_category" to "sports_category")
+    fun InsertNewSportsRequest(sports_name: String, sports_rule: String, user_name : String, user_token : String) {
+        val map = hashMapOf<String,String>("sports_name" to sports_name, "sprots_rule" to sports_rule,"user_token" to user_token,
+                "sports_category" to "sports_category", "user_name" to user_name)
 
         Connect.api.WriteSportsRequest(map)
                 .enqueue(object :retrofit2.Callback<ResponseBody>{

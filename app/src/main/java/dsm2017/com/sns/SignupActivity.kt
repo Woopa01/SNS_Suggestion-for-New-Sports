@@ -65,7 +65,7 @@ class SignupActivity : AppCompatActivity() {
                 .enqueue(object : retrofit2.Callback<ResponseBody> {
 
                     override fun onResponse(call: Call<ResponseBody>?, response: Response<ResponseBody>?) {
-                        if (response!!.code() == 200) {
+                        if (response!!.isSuccessful) {
                             Log.d("DEBUG", "success")
                             Nextpage()
                         } else {
