@@ -20,10 +20,13 @@ class SigninActivity : AppCompatActivity() {
 
     lateinit var username : String
     lateinit var usertoken : String
+    val context = SigninActivity@this
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
+
+        SigninSharedPreferences.CheckLogin(context)
 
         signin_main_button.setOnClickListener {
            //SignInRequest(signin_id.text.toString(),signin_password.text.toString())
@@ -52,10 +55,7 @@ class SigninActivity : AppCompatActivity() {
                              username = userDataModel!!.UserDatas().user_name
                              usertoken = userDataModel.UserDatas().user_token
 
-                        val shaeredPreferences = getSharedPreferences("pref", Context.MODE_PRIVATE)
-                        val editor = shaeredPreferences.edit()
-                                .putString("user_name",username)
-                                .putString("user_token",usertoken)
+                        SigninSharedPreferences.setLogin(context, user_id, user_password, username, usertoken)
 
                         Log.d("DEBUG",usertoken)
                         Log.d("DEBUG",username)

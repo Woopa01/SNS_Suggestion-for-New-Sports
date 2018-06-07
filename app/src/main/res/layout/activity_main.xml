@@ -187,7 +187,7 @@
                  android:layout_weight="0.3"
                  android:id="@+id/main_viewpager1"
                  android:layout_width="match_parent"
-                 android:layout_height="200dp" />
+                 android:layout_height="200dp"/>
 
          </LinearLayout>
 
@@ -241,7 +241,7 @@
                     android:id="@+id/main_viewpager2"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_weight="0.3" />
+                    android:layout_weight="0.3"/>
 
                 <View
                     android:layout_weight="1.2"
