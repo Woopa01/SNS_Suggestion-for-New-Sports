@@ -155,6 +155,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/mypage_modifyname"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
@@ -178,6 +179,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/mypage_modifypassword"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
@@ -211,6 +213,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/mypage_showfeedback"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
@@ -235,6 +238,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/mypage_logout"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_width="match_parent"

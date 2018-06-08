@@ -31,6 +31,12 @@ interface API {
     @FormUrlEncoded
     fun WriteSportsRequest(@FieldMap map: HashMap<String,String> ) : Call<ResponseBody>
 
+    @POST("/update/name")
+    @FormUrlEncoded
+    fun ModifyNameRequest(@FieldMap map: HashMap<String, String>) : Call<Void>
 
+    @POST("/update/password")
+    @FormUrlEncoded
+    fun ModifyPasswordRequest(@FieldMap map: HashMap<String, String>) : Call<Void>
 
 }
