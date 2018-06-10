@@ -61,6 +61,12 @@ class MyPageActivity : AppCompatActivity() {
             dialog.window.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT)
         }
 
+        mypage_showfeedback.setOnClickListener {
+            val intent = Intent(MyPageActivity@this, ShowListActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         mypage_logout.setOnClickListener {
             SigninSharedPreferences.setLogout(context = MyPageActivity@ this)
             val intent = Intent(MyPageActivity@ this, SigninActivity::class.java)
