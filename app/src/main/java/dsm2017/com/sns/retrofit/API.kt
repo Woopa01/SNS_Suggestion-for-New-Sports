@@ -1,5 +1,6 @@
 package dsm2017.com.sns.retrofit
 
+import dsm2017.com.sns.WriteFeedBackActivity
 import dsm2017.com.sns.retrofit.Model.EmailCodeModel
 import dsm2017.com.sns.retrofit.Model.SportsLikeModel
 import dsm2017.com.sns.retrofit.Model.UserDataModel
@@ -30,6 +31,10 @@ interface API {
     @POST("/insert/sports")
     @FormUrlEncoded
     fun WriteSportsRequest(@FieldMap map: HashMap<String,String> ) : Call<ResponseBody>
+
+    @POST("/insert/feedback")
+    @FormUrlEncoded
+    fun WriteFeedBackRequset(@FieldMap map: HashMap<String, String> ) : Call<ResponseBody>
 
     @POST("/update/name")
     @FormUrlEncoded

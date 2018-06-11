@@ -12,7 +12,6 @@ import dsm2017.com.sns.retrofit.Model.SportsLikeModel
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Response
-import kotlin.math.ceil
 
 class MainActivity : AppCompatActivity() {
 
@@ -60,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         fab.setOnClickListener {
-            val intent = Intent(MainActivity@this,WriteActivty::class.java)
+            val intent = Intent(MainActivity@this,WriteSportsActivty::class.java)
             startActivity(intent)
             finish()
         }
