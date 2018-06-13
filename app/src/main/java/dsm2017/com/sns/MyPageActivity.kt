@@ -62,7 +62,7 @@ class MyPageActivity : AppCompatActivity() {
         }
 
         mypage_showfeedback.setOnClickListener {
-            val intent = Intent(MyPageActivity@this, ShowListActivity::class.java)
+            val intent = Intent(MyPageActivity@this, ShowFeedBackListActivity::class.java)
             startActivity(intent)
             finish()
         }

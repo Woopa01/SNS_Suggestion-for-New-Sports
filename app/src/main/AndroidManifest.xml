@@ -15,8 +15,9 @@
         <activity android:name=".ShowDetailActivity"/>
         <activity android:name=".WriteSportsActivty"/>
         <activity android:name=".MyPageActivity"/>
+        <activity android:name=".ShowFeedBackListActivity"/>
         <activity android:name=".WriteFeedBackActivity"/>
-        <activity android:name=".ShowListActivity"/>
+        <activity android:name=".ShowSportsListActivity"/>
         <activity android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>

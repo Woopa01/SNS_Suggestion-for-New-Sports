@@ -47,13 +47,13 @@ class MainActivity : AppCompatActivity() {
         main_viewpager2.adapter = mainViewPageAdapter2
 
         main_viewpager1_detail.setOnClickListener {
-            val intent = Intent(MainActivity@this,ShowListActivity::class.java)
+            val intent = Intent(MainActivity@this,ShowSportsListActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         main_viewpager2_detail.setOnClickListener {
-            val intent = Intent(MainActivity@this,ShowListActivity::class.java)
+            val intent = Intent(MainActivity@this,ShowSportsListActivity::class.java)
             startActivity(intent)
             finish()
         }

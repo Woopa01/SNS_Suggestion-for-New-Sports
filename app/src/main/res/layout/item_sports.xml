@@ -6,7 +6,7 @@
     android:layout_height="100dp">
 
     <LinearLayout
-        android:id="@+id/recycler_item"
+        android:id="@+id/sports_item"
         android:layout_margin="20dp"
         android:background="@drawable/item_viewpager_shape"
         android:orientation="horizontal"
@@ -52,7 +52,7 @@
                 android:layout_height="match_parent"/>
 
             <TextView
-                android:id="@+id/list_recycler_title"
+                android:id="@+id/list_sports_title"
                 android:textSize="17sp"
                 android:text="운동 이름"
                 android:layout_weight="1"
@@ -61,7 +61,7 @@
 
 
             <TextView
-                android:id="@+id/list_recycler_name"
+                android:id="@+id/list_sports_name"
                 android:text="닉네임"
                 android:layout_weight="1.1"
                 android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/list_recycler_like"
+                    android:id="@+id/list_sports_like"
                     android:text="좋아요 : 30"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
@@ -92,7 +92,7 @@
                     android:layout_height="match_parent"/>
 
                 <TextView
-                    android:id="@+id/list_recycler_date"
+                    android:id="@+id/list_sports_date"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
