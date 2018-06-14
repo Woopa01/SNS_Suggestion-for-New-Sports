@@ -2,6 +2,7 @@ package dsm2017.com.sns.retrofit
 
 import dsm2017.com.sns.WriteFeedBackActivity
 import dsm2017.com.sns.retrofit.Model.EmailCodeModel
+import dsm2017.com.sns.retrofit.Model.FeedBackListModel
 import dsm2017.com.sns.retrofit.Model.SportsLikeModel
 import dsm2017.com.sns.retrofit.Model.UserDataModel
 import okhttp3.ResponseBody
@@ -11,6 +12,10 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 interface API {
+
+    @POST("/show/feedback/list")
+    @FormUrlEncoded
+    fun ShowFeedBackListRequest(@FieldMap map: HashMap<String, String>) : Call<FeedBackListModel>
 
     @POST("/signup")
     @FormUrlEncoded
