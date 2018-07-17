@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         viewpagerdata2.add(MainViewPageData(5.toString(), "공 높이 던져서 입으로 받기", "성민", "좋아요 : 67", "2018.06.02"))
 
 
-
         val mainViewPagerAdapter1 = MainViewPagerAdapter(MainActivity@ this, viewpagerdata1)
         main_viewpager1.adapter = mainViewPagerAdapter1
 

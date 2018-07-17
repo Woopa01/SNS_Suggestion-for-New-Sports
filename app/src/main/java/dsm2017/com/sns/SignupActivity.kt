@@ -32,7 +32,10 @@ class SignupActivity : AppCompatActivity() {
         }
 
         signup_signup_button.setOnClickListener{
-            SignUpRequest(signup_email_input.text.toString(),signup_password.text.toString(),signup_nickname.text.toString(),checkbool)
+            if(emailcode == signup_checkemail_input.text.toString()){
+                SignUpRequest(signup_email_input.text.toString(),signup_password.text.toString(),signup_nickname.text.toString(),checkbool)
+                Toast.makeText(baseContext,"이메일이 인증되었습니다.",Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -44,6 +47,7 @@ class SignupActivity : AppCompatActivity() {
                         val emailCodeModel = response!!.body()
 
                             emailcode = emailCodeModel!!.code.toString()
+
 
                         Toast.makeText(baseContext,emailcode,Toast.LENGTH_SHORT).show()
                         Log.d("DEBUG","success")
